@@ -1,5 +1,6 @@
-var starImg,bgImg;
+var starImg, bgImg;
 var star, starBody;
+var fairy, fairyImage, fairySound;
 
 //create variable for fairy sprite and fairyImg
 
@@ -31,6 +32,7 @@ function setup() {
 
 fairy = createSprite(150, 500);
 fairy.addAnimation("fairyFlying", fairyImage);
+fairy.scale = 0.4;
 
 	star = createSprite(650,30);
 	star.addImage(starImg);
@@ -58,7 +60,7 @@ function draw() {
 
   //write code to stop star in the hand of fairy
 
-  if(star.y > 470 && starBody.position,y > 470){
+  if(star.y > 470 && starBody.position.y > 470){
 
 	Matter.body.setStatic(starBody, true);
 
